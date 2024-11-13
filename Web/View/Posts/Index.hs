@@ -25,6 +25,7 @@ instance View IndexView where
         where
             breadcrumb = renderBreadcrumb
                 [ breadcrumbLink "Posts" PostsAction
+                , breadcrumbLinkExternal "Home" ("/" :: Text)
                 ]
 
 renderPost :: Post -> Html

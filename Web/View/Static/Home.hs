@@ -36,8 +36,5 @@ instance View HomeView where
 
 |]
 
-homeUrl :: Text
-homeUrl = "http://localhost:8000/"
-
 workshopUrl:: Text
 workshopUrl = "https://biscotty.online"

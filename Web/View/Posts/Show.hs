@@ -1,6 +1,7 @@
 module Web.View.Posts.Show where
 import Web.View.Prelude
 import qualified Text.MMark as MMark
+import Text.MMark.Extension.TableOfContents
 
 data ShowView = ShowView { post :: Include "comments" Post }
 

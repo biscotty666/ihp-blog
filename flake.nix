@@ -30,6 +30,7 @@
                         text
                         hlint
                         mmark
+                        mmark-ext
                         # Uncomment on local development for testing
                         # hspec
                     ];
