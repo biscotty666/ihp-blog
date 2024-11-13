@@ -20,12 +20,24 @@ instance View HomeView where
                   </p>
 
               </div>
+              <div style="display: flex;justify-content: space-between">
+
+                      <a
+                          href={pathTo PostsAction}
+                          class="btn btn-primary"
+                      >See the posts</a>
+                      <a
+                          href={workshopUrl}
+                          class="btn btn-primary"
+                          target="_blank"
+                      >Visit the workshop!</a>
+              </div>
          </div>
 
-         <div style="max-width: 800px; margin-left: auto; margin-right: auto; margin-top: 4rem">
-              <img src="/ihp-welcome-icon.svg" alt="/ihp-welcome-icon" style="width:100%;">
-              <p style="color: hsla(196, 13%, 50%, 1); margin-top: 4rem">
-                 You can modify this start page by making changes to "./Web/View/Static/Welcome.hs".
-              </p>
-         </div>
 |]
+
+homeUrl :: Text
+homeUrl = "http://localhost:8000/"
+
+workshopUrl:: Text
+workshopUrl = "https://biscotty.online"
