@@ -30,6 +30,7 @@ instance View HomeView where
                           href={workshopUrl}
                           class="btn btn-primary"
                           target="_blank"
+                          onclick="if (!confirm('Do you really want to leave the site?')) event.preventDefault();"
                       >Visit the workshop!</a>
               </div>
          </div>
