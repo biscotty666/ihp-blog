@@ -22,7 +22,7 @@ defaultLayout inner = [hsx|
     </head>
     <body>
         <input id="color-mode" type="checkbox" name="color-mode">
-        <label for="color-mode">
+        <label for="color-mode" class="color-control">
             <span class="dark-mode-hide">Dark Mode</span>
             <span class="light-mode-hide">Light Mode</span>
         </label>

@@ -1,11 +1,11 @@
 :root {
-    --bg:#F4F0EB;
-    --text: #141414;
+  --bg: #F4F0EB;
+  --text: #141414;
 }
 
 * {
-    box-sizing: border-box;
-    max-width: 35rem;
+  box-sizing: border-box;
+  max-width: 35rem;
 }
 
 html,
@@ -14,41 +14,72 @@ div {
   max-width: none;
 }
 
+html,
+body {
+  margin: 0px;
+  margin-top: -25px;
+  height: 100dvh;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-    --bg:black;
-    --text:white;
-    }
+  :root {
+    --bg: black;
+    --text: white;
+  }
 }
 
-#color-mode:checked ~ .color-scheme-wrapper {
-    background: var(--text);
-    color: var(--bg);
+#color-mode:checked~.color-scheme-wrapper {
+  background: var(--text);
+  color: var(--bg);
 }
+
+.button-normal {
+  color: black;
+  background-color: aqua;
+  border: 0.5em solid;
+  border-color: aqua;
+  border-radius: 0.5em;
+  text-decoration: none;
+  font-size: large;
+}
+
+.button-normal:hover {
+ transform: scale(110%);
+}
+
+input[name="color-mode"] {
+  transform: translate(0px, 55px);
+}
+
+label[class="color-control"] {
+  position: absolute;
+  transform: translate(5px, 55px);
+}
+
 
 .color-scheme-wrapper {
-    min-height:100vh;
-    background: var(--bg);
-    color: var(--text);
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .light-mode-hide {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark-mode-hide {
     display: none;
   }
-  
-  @media (prefers-color-scheme: dark) {
-    .dark-mode-hide {
-      display: none;
-    }
+}
+
+@media (prefers-color-scheme: dark) {
+  .light-mode-hide {
+    display: initial;
   }
-  
-  @media (prefers-color-scheme: dark) {
-    .light-mode-hide {
-      display: initial;
-    }
-  }
+}
