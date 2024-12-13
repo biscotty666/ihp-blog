@@ -21,7 +21,9 @@ defaultLayout inner = [hsx|
         <title>{pageTitleOrDefault "App"}</title>
     </head>
     <body>
-        <div class="container mt-4">
+        <input id="color-mode" type="checkbox" name="color-mode">
+<label for="color-mode">Dark Mode</label>
+        <div class="color-scheme-wrapper">
             {renderFlashMessages}
             {inner}
         </div>
@@ -35,7 +37,6 @@ defaultLayout inner = [hsx|
 
 stylesheets :: Html
 stylesheets = [hsx|
-        <link rel="stylesheet" href={assetPath "/vendor/bootstrap-5.2.1/bootstrap.min.css"}/>
         <link rel="stylesheet" href={assetPath "/vendor/flatpickr.min.css"}/>
         <link rel="stylesheet" href={assetPath "/app.css"}/>
     |]
@@ -45,8 +46,6 @@ scripts = [hsx|
         {when isDevelopment devScripts}
         <script src={assetPath "/vendor/jquery-3.6.0.slim.min.js"}></script>
         <script src={assetPath "/vendor/timeago.js"}></script>
-        <script src={assetPath "/vendor/popper-2.11.6.min.js"}></script>
-        <script src={assetPath "/vendor/bootstrap-5.2.1/bootstrap.min.js"}></script>
         <script src={assetPath "/vendor/flatpickr.js"}></script>
         <script src={assetPath "/vendor/morphdom-umd.min.js"}></script>
         <script src={assetPath "/vendor/turbolinks.js"}></script>

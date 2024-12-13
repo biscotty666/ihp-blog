@@ -1,0 +1,29 @@
+:root {
+    --bg:#F4F0EB;
+    --text: #141414;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    --bg:black;
+    --text:white;
+    }
+}
+
+#color-mode:checked ~ .color-scheme-wrapper {
+    background: var(--text);
+    color: var(--bg);
+}
+
+@media (prefers-color-scheme: dark) {
+    #color-mode:checked ~ .color-scheme-wrapper {
+    --bg: var(--bg);
+    --text: var(--text);
+    }
+}
+    
+.color-scheme-wrapper {
+    min-height:100vh;
+    background: var(--bg);
+    color: var(--text);
+}
