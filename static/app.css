@@ -3,6 +3,17 @@
     --text: #141414;
 }
 
+* {
+    box-sizing: border-box;
+    max-width: 35rem;
+}
+
+html,
+body,
+div {
+  max-width: none;
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
     --bg:black;
@@ -27,3 +38,19 @@
     background: var(--bg);
     color: var(--text);
 }
+
+.light-mode-hide {
+    display: none;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .dark-mode-hide {
+      display: none;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .light-mode-hide {
+      display: initial;
+    }
+  }
