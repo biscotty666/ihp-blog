@@ -7,7 +7,7 @@ instance View IndexView where
     html IndexView { .. } = [hsx|
         {breadcrumb}
 
-        <h1>Posts<a href={pathTo NewPostAction} class="btn btn-primary ms-4">+ New</a></h1>
+        <h1>Posts <a href={pathTo NewPostAction} class="button rounded bg-green-100 px-4 ml-2">+ New</a></h1>
         <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -32,7 +32,7 @@ renderPost :: Post -> Html
 renderPost post = [hsx|
     <tr>
         <td><a href={ShowPostAction post.id}>{post.title}</a></td>
-        <td><a href={EditPostAction post.id} class="text-muted">Edit</a></td>
-        <td><a href={DeletePostAction post.id} class="js-delete text-muted">Delete</a></td>
+        <td><a href={EditPostAction post.id} class="button rounded bg-green-100 px-4 ml-2">Edit</a></td>
+        <td><a href={DeletePostAction post.id} class="button rounded bg-green-100 px-4 ml-2">Delete</a></td>
     </tr>
 |]
